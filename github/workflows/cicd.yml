@@ -1,9 +1,6 @@
 name: test project
 
-on:
-  [push]
-  pull-request:
-    branches: main
+on: push
 
 jobs:
 
