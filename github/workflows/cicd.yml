@@ -1,7 +1,7 @@
 name: test project
 
 on:
-  push:
+  [push]
   pull-request:
     branches: main
 
