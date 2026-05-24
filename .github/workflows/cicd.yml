@@ -1,0 +1,19 @@
+name: test project
+
+# CORREGIDO: Disparador con la sintaxis correcta por bloques
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      # CORREGIDO: Limpiado el "with" que no corresponde a checkout
+      - uses: actions/checkout@v4
+      
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
