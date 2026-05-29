@@ -8,31 +8,20 @@ Github Actions is a CI/CD tool that allows you to automate your workflow. It is 
 - Repository with code (you can use this repository)
 
 ## Steps
-2. Create a new file in the `.github/workflows` directory
-3. Define the workflow
-4. Push the changes to the repository
-5. Check the Actions tab in the repository
 
-## Example Workflow
-```yaml
-name: Test Project
+1. descargar el proyecto en zip
+2. descomprimir y abrir en VSCode o Intellij
+3. creo en GitHub un repo público
+4. abrir la terminal del proyecto en el IDE
+5. git init
+6. git remote add origin URL_MI_REPO
+7. git branch -M main
+8. git add .
+9. git commit -m "añadido el codigo al repo"
+10. git push -u origin main
 
-on:
-  pull_request:
-    branches:
-      - main
+- hago el yaml
+- nuevo commit
+- nuevo push
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    container:
-      image: node:20
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-
-```
+- se ejecuta el pipeline de CI
